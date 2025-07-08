@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js"></script>
+</head>
+
+<body>
+    <div class="main-container">
+        <input type="text" placeholder="search" id="input" class="search-bar">
+        <button class="search-btn">Search</button>
+        <div class="container">
+            <dotlottie-player
+                id="weather-animation"
+                class="weather-bg"
+                autoplay
+                loop
+                mode="normal"
+                background="transparent">
+            </dotlottie-player>
+            <div class="cn-dt">
+                <p id="cname-contname">c</p>
+                <p id="dt-ti">i</p>
+            </div>
+            <div class="image">
+            </div>
+            <div class="con">
+                <p id="temp">t</p>
+                <p id="condition">con</p>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>

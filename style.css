@@ -1,0 +1,143 @@
+/* Set background for entire page */
+body {
+  background-color: #101014;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+/* Main wrapper to center everything vertically and horizontally */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  width: 100%;
+}
+
+/* Search input styling */
+.search-bar {
+  background-color: #1A1A1F;
+  border: 1px solid #2A2A30;
+  border-radius: 30px;
+  padding: 12px 20px 12px 40px; /* nothing much are changed only the change are for adding icon search*/
+  width: 250px;
+  max-width: 90%;
+  color: white;
+  font-size: 16px;
+  margin-bottom: 20px;
+  outline: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85zm-5.242 1.106a5 5 0 1 1 0-10 5 5 0 0 1 0 10z'/%3E%3C/svg%3E") no-repeat 11px center;
+  background-size: 20px;
+  transition: width 0.3s ease;
+}
+
+.search-bar:hover{
+  width: 500px;
+}
+/* Search button */
+.search-btn {
+  background-color: #1E1E28;
+  color: #ffffff;
+  border: none;
+  padding: 7px 24px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.5s ease;
+  margin-bottom: 40px;
+}
+
+.search-btn:hover {
+  background-color: #2C2C3A;
+}
+
+/* Main content container */
+.container {
+  visibility: hidden;
+  position: relative;
+  z-index: 1;
+  background-color: #1E1E28;
+  border: 1px solid #2A2A30;
+  border-radius: 16px;
+  padding: 22px;
+  height: 68%;
+  width: 70%;
+  max-width: 1000px;
+  min-height: 280px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Nested content */
+.con {
+  display: flex;
+  justify-content: space-between;
+  font-size: 40px;  /* larger for more visual impact */
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.cn-dt {
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 20px; /* bigger font for visibility */
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Weather Icon section */
+.image img{
+  width: 140px;
+  height: 140px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* margin: 20px 0; */
+}
+
+/* Temperature */
+#temp {
+  font-size: 50px;
+  font-weight: bold;
+  color: #ffda6d; /* warm highlight */
+}
+
+/* Condition (e.g., “Cloudy”) */
+#condition {
+  font-size: 50px;
+  font-weight: bold;
+  color: #d3d3d3;
+  text-align: right;
+}
+
+.weather-bg {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  opacity: 0.8;
+  pointer-events: none;
+  filter: brightness(1.2);
+}
+
+.cn-dt,
+.image,
+.con {
+  position: relative;
+  z-index: 1; /* Ensure these are above the animation */
+}
